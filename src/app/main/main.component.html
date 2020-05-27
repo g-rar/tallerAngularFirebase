@@ -1,0 +1,40 @@
+<div class="page-content">
+    <h1>Leer de la BD</h1>
+    <p>
+        Lo que vamos a hacer es obtener un documento de firestore, y el texto lo vamos a meter aquí:
+    </p>
+    <div class="page-card-1">
+        <p>
+            {{author}}:
+        </p>
+        <p>
+            {{textRecovered}}
+        </p>
+    </div>
+    <button class="main-btn" (click)="getData()">Obtener de la BD</button>
+    <div class="page-card-1" *ngFor="let nota of notas">
+        <p>
+            {{nota.autor}}:
+        </p>
+        <p>
+            {{nota.contenido}}
+        </p>
+    </div>
+    <button class="main-btn" (click)="hacerConsulta()">Consultar</button>
+    <h1>Escribir en la BD</h1>
+    <p>
+        Si se quiere también se puede setear el valor del documento o añadir uno nuevo
+    </p>
+    <form [formGroup]="newNoteForm" (ngSubmit)="writeInDb(newNoteForm.value)">
+        <div>
+            <label>Autor:</label>
+            <input type="text" class="text-input" formControlName="noteAuthor">
+        </div>
+        <div>
+            <label>Nota:</label>
+            <input type="text" class="text-input" formControlName="noteContent">
+        </div>
+        <button type="submit" class="main-btn">Subir</button>
+        <button type="button" class="secondary-btn" (click)="addNewNote(newNoteForm.value)">Añadir nuevo</button>
+    </form>
+</div>

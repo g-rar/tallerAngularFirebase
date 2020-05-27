@@ -1,1 +1,185 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+:root {
+    --color-main:rgb(0, 119, 216);
+    --color-secondary: rgb(255, 187, 0);
+    --color-dark: rgb(13, 51, 121);
+    --color-bright: rgb(247, 247, 247);
+    --color-text: rgb(223, 223, 223);
+    --color-bg: #2b2b2b;
+    --color-bg1: #3a3a3a;
+    --color-bg2: #505050;
+    --color-alert: #d62727;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+}
+
+.toolbar {
+    height: 60px;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-main);
+    font-weight: 600;
+}
+
+.main_title {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: x-large;
+}
+
+.main_title svg {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.btn-sandwitch {
+    fill: var(--color-dark);
+    transition: 200ms ease;
+}
+
+.btn-sandwitch:hover{
+    fill: rgba(0, 0, 0, 0.733);
+}
+
+/*============== Side menu ================*/
+
+.side-menu{
+    position: fixed;
+    height: 100vh;
+    background-color: var(--color-main);
+    transition: 200ms ease-in-out;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-bg);
+}
+
+.side-menu hr {
+    width: 90%;
+}
+
+.side-menu h1 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    justify-self: center;
+}
+
+.side-menu-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item {
+    padding: 0;
+    width: 100%;
+    transition: 200ms ease-in-out;
+}
+
+.nav-item:hover {
+    background: var(--color-bright);
+}
+
+.side-menu-link {
+    margin: 0.25rem;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.25rem;
+}
+
+.side-menu-link svg {
+    width:2rem;
+    height:2rem;
+}
+
+/*================= Forms ================*/
+.text-input {
+    margin: 3px;
+    padding: 3px;
+    border-radius: 5px;
+    border: 0;
+}
+
+/*================ Buttons ===============*/
+
+.btn-row {
+    margin: 0.5rem;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-btn{
+    border: none;
+    background: var(--color-main);
+    padding: 1.25rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    color: var(--color-bg); 
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.btn-small {
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+/*============= Page content ============*/
+
+.page-content {
+    margin: 2rem 5rem;
+    background-color: var(--color-bg1);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+}
+
+.page-content p {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    font-weight: 500;
+}
+
+.page-content h1 {
+    font-weight: 900;
+}
+
+.text-alert {
+    color: var(--color-alert);
+}
+
+.page-card-1 {
+    margin: 1rem 3rem;
+    background: var(--color-bg2);
+    padding: 0.3rem 1rem;
+    border-radius: 15px;
+}
+
+/*============== Table =================*/
+.page-content table {
+    width: 100%;
+    background: var(--color-bg2);
+    border-radius: 15px;
+}
+
+.page-content table td{
+    text-align: center;
+}
